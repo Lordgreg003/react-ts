@@ -7,26 +7,24 @@ const Button1 = () => {
       <h1 className="font-bold text-xl">Locations</h1>
       <button onClick={() => sethidden(!hidden)} className="flex flex-row">
         <input
-          className="border py-2 "
+          className="border py-2 outline-none  rounded-lg text-center"
           type="text"
-          placeholder="select location "
+          placeholder="Select Location "
         />
       </button>
       <div className={`${hidden && "invisible"}`}>
-        <select className="w-36  space-y-3" name="" id="" multiple>
-          <option className="font-bold py-2 px-3 bg-[#f7f4f4]" value="">
-            LOCATIONS
-          </option>
-          <option value="">Anambra</option>
-          <option value="">Enugu</option>
-          <option value="">Akwaibom</option>
-          <option value="">Abuja</option>
-          <option value="">Imo</option>
-          <option value="">Crossriver</option>
-          <option value="">Lagos</option>
-          <option value="">Abia</option>
-          <option value="">Ondo</option>
-        </select>
+        <div className="text-left">
+          <h1 className="font-bold text-xl">STATES</h1>
+          <ul>
+            <li>Enugu</li>
+            <li>Abia</li>
+            <li>Enugu</li>
+            <li>Anambra</li>
+            <li>Ondo</li>
+            <li>Ebony</li>
+            <li>Imo</li>
+          </ul>
+        </div>
       </div>
     </div>
   );

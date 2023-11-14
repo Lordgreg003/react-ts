@@ -16,4 +16,8 @@ export { default as star2 } from "./Star 2.png";
 export { default as star3 } from "./Star 3.png";
 export { default as star4 } from "./Star 4.png";
 export { default as star5 } from "./Star 5.png";
+export { default as facebook } from "./facebook.png";
+export { default as linkdin } from "./linkdin.png";
+export { default as insta } from "./insta.png";
+export { default as twitter } from "./twitter.png";
 export { default as reactangle } from "./Rectangle.png";

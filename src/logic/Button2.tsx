@@ -8,31 +8,24 @@ const Button2 = () => {
       <h1 className="font-bold text-xl">HOUSE TYPE</h1>
       <button onClick={() => sethidden(!hidden)} className="flex flex-row">
         <input
-          className="border py-2 "
+          className="border py-2 rounded-lg text-center"
           type="text"
-          placeholder="select location "
+          placeholder="House Type "
         />
         <img src={arrow} alt="" />
       </button>
       <div className={`${hidden && "invisible"}`}>
-        <select className="w-36 space-y-3" name="" id="" multiple>
-          <option className="font-bold py-2 px-3 bg-[#f7f4f4]" value="">
-            RESIDENT
-          </option>
-          <option value="">Self con</option>
-          <option value="">Single Room</option>
-          <option value="">1 Bedroom Flat</option>
-          <option value="">2 Bedroom Flat</option>
-          <option value="">3 Bedroom Flat</option>
-          <option value="">Others</option>
-          <option className="font-bold py-2 px-3 bg-[#f7f4f4]" value="">
-            {" "}
-            COMMERCIALS
-          </option>
-          <option value="">Shop</option>
-          <option value="">Office</option>
-          <option value="">Others</option>
-        </select>
+        <div className="text-left">
+          <h1 className="font-bold text-xl">RESIDENT</h1>
+          <ul>
+            <li>Self con</li>
+            <li>Single Room</li>
+            <li>1 Bedroom Flat</li>
+            <li>2 Bedroom Flat</li>
+            <li>3 Bedroom Flat</li>
+            <li>Others</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
