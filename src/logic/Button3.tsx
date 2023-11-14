@@ -8,20 +8,23 @@ const Button3 = () => {
       <h1 className="font-bold text-xl">PRICE RANGE</h1>
       <button onClick={() => sethidden(!hidden)} className="flex flex-row">
         <input
-          className="border py-2 "
+          className="border py-2  rounded-lg text-center "
           type="text"
-          placeholder="search price range "
+          placeholder="Search Price Range "
         />
         <img src={arrow} alt="" />
       </button>
       <div className={`${hidden && "invisible"}`}>
-        <select className="w-36 space-y-5" name="" id="" multiple>
-          <option value="">$200-350</option>
-          <option value="">$400-550</option>
-          <option value="">$500-650</option>
-          <option value="">$700-850</option>
-          <option value="">$900-1150</option>
-        </select>
+        <div className="text-left">
+          <h1 className="font-bold text-xl">PRICES</h1>
+          <ul>
+            <li>$200-350</li>
+            <li>$400-550</li>
+            <li>$500-650</li>
+            <li>$700-850</li>
+            <li>$900-1150</li>
+          </ul>
+        </div>
       </div>
     </div>
   );

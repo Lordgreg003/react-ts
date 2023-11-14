@@ -1,6 +1,7 @@
 import React from "react";
 import { Nav, Foot } from "../components/layout/Index";
 import {
+  Relax,
   Section,
   Property,
   Property2,
@@ -8,7 +9,6 @@ import {
   Work,
   Works2,
   Africa,
-  Video,
   Ready,
 } from "../components/home/Index";
 
@@ -16,6 +16,7 @@ const Homescreen = () => {
   return (
     <div>
       <Nav />
+      <Relax />
       <Section />
       <Property />
       <Property2 />
@@ -23,7 +24,6 @@ const Homescreen = () => {
       <Work />
       <Works2 />
       <Africa />
-      <Video />
       <Ready />
       <Foot />
     </div>

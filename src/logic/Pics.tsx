@@ -20,11 +20,13 @@ const Pics = () => {
   return (
     <div>
       {" "}
-      <img
-        src={images[index]}
-        style={{ width: `${width}rem`, height: `${height}rem` }}
-        alt=""
-      />
+      <select className="w-36 space-y-5" name="" id="" multiple>
+        <option value="">$200-350</option>
+        <option value="">$400-550</option>
+        <option value="">$500-650</option>
+        <option value="">$700-850</option>
+        <option value="">$900-1150</option>
+      </select>
     </div>
   );
 };

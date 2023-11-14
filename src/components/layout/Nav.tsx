@@ -1,68 +1,84 @@
-import React from "react";
-import { image1, image2 } from "../../images/Index";
-import { Link } from "react-router-dom";
+import React, { useRef } from "react";
+import { image1 } from "../../images/Index";
+import {} from "react-router-dom";
+import "../../som.css";
 
 const Nav = () => {
+  const openRef = useRef<any>("");
+  const flexRef = useRef<any>("hidden");
+
+  const skrill = () => {
+    openRef.current.className === "open hambuger focus:outline-none"
+      ? (openRef.current.className = "hambuger focus:outline-none")
+      : (openRef.current.className = "open hambuger focus:outline-none");
+
+    flexRef.current.className === "hidden md:hidden"
+      ? (flexRef.current.className = "md:hidden")
+      : (flexRef.current.className = "hidden md:hidden");
+
+    console.log(openRef);
+    console.log(flexRef);
+  };
+
   return (
-    <div
-      className="relative flex flex-col w-full h-[1000px] space-y-20 "
-      style={{ backgroundImage: `url(${image2})` }}
-    >
-      <div className="flex flex-row justify-between space-x-10 pt-20">
-        {" "}
-        <div className="flex flex-row  ">
-          <img className="w-14 h-14" src={image1} alt="" />
-          <p className="font-semibold text-[#4BA586] pt-3 md:text-2xl ">
-            HOUSE LINKUP
-          </p>
+    <nav className="">
+      <div className="flex items-center justify-between bg-[#C8CCCD]">
+        <div className="flex items-center">
+          <img src={image1} alt="" />
+          <div className="text-[#69B99D] text-xl font-bold">House Linkup</div>
         </div>
-        <div className="hidden space-x-7 md:hidden lg:flex">
-          <a href="" className="text-[#69B99D] text-lg">
-            Home{" "}
+        <div className="hidden md:flex md:space-x-2 lg:space-x-6">
+          <a className="text-[#69B99D]" href="#home">
+            Home
           </a>
-          <a href="" className=" text-lg">
-            Property
-          </a>
-          <a href="" className="text-lg">
-            About
-          </a>
-          <a href="" className="text-lg">
-            Service
-          </a>
-          <a href="" className="text-lg">
-            Contact
-          </a>
+          <a href="#property">Property</a>
+          <a href="#about">About</a>
+          <a href="#service">Service</a>
+          <a href="#contact">Contact</a>
         </div>
-        <div className="space-x-6">
-          <a
-            href=""
-            className="bg-[#F5F5F5] border py-3 px-8 text-[#69B99D] md:py-5 md:px-12 border-[#69B99D]   "
+        <div className="hidden md:block md:space-x-3 lg:space-x-5">
+          <button className="text-[#69B99D] md:py-3 md:px-12 bg-white">
+            Signup
+          </button>
+          <button className="text-white md:py-3 md:px-12 bg-[#69B99D]">
+            Login
+          </button>
+        </div>
+        <div className="flex  md:hidden ml-auto ">
+          <button
+            onClick={skrill}
+            id="menu-btn"
+            ref={openRef}
+            className="hambuger focus:outline-none "
           >
-            Sign In
-          </a>
-          <a
-            href=""
-            className="bg-[#69B99D] border py-3 px-8 text-white md:py-5 md:px-12"
-          >
-            Log In
-          </a>
+            <span className="hamburger-top"></span>
+            <span className="hamburger-middle"></span>
+            <span className="hamburger-bottom"></span>
+          </button>
         </div>
-      </div>
-      <div className="space-y-5">
-        {" "}
-        <div className="space-y-5">
-          <div className="text-5xl font-bold">Find a home </div>
-          <div className="text-5xl font-bold ">Where you can relax</div>
-        </div>
-        <div>
-          <div>
-            Search house for rent. Get Results from 8 Engines Instantly.
-            Information 24/7.
+        <div ref={flexRef} className="hidden md:hidden">
+          <div className="absolute z-20 flex flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-[#C8CCCD] sm:w-auto sm:self-center left-6 right-6 drop-shadow-md text-black">
+            <a onClick={skrill} href="#home">
+              Home
+            </a>
+            <a onClick={skrill} href="#property">
+              Property
+            </a>
+            <a onClick={skrill} href="#about">
+              About
+            </a>
+            <a onClick={skrill} href="#service">
+              Service
+            </a>
+            <a onClick={skrill} href="#contact">
+              Contact
+            </a>
+            <button>Signup</button>
+            <button>Login</button>
           </div>
-          <div>Web, Images & Videos. Trusted by Billions.</div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

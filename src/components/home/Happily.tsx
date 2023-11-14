@@ -21,9 +21,9 @@ const Happily = () => {
         </div>
         <button className=" border py-3 px-8 rounded-lg">Explore More</button>
       </div>
-      <div className="w-full h-1/4 md:w-1/4  md:h-full px-10  ">
+      <div className="w-full h-1/4 md:w-[400px]  md:h-full px-20  ">
         <img
-          className="md:h-[450px] w-[400px] md:pb-10 md:w-[px]   "
+          className="md:h-[450px] w-[400px] md:pb-10 md:w-[400px]   "
           src={image6}
           alt=""
         />
